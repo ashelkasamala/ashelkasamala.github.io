@@ -1,0 +1,205 @@
+<!-- Chat Icon -->
+<div id="chat-button" onclick="openChat()">
+  <i class="fas fa-comments"></i>
+</div>
+
+<!-- Login Modal -->
+<div id="chat-login-modal" class="modal">
+  <div class="modal-content">
+    <h3>Login to Chat</h3>
+    <input type="text" id="chat-username" placeholder="Enter your name" />
+    <input type="password" id="chat-password" placeholder="Password" />
+    <button onclick="handleLogin()">Login</button>
+    <p id="chat-login-error"></p>
+  </div>
+</div>
+
+<!-- Chat Box -->
+<div id="chat-box" class="chat-box hidden">
+  <div class="chat-header">
+    <h4>Chat with Ashel</h4>
+    <button onclick="closeChat()">&times;</button>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <p class="bot-msg">Hi! How can I help you today?</p>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="chat-message" placeholder="Type a message..." />
+    <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+
+/* Chat Button */
+#chat-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #3498db;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+/* Modal Login */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.modal-content {
+  background: white;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 10% auto;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+.modal-content button {
+  background: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+#chat-login-error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Chat Box */
+.chat-box {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 300px;
+  max-height: 400px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+.chat-box.hidden {
+  display: none;
+}
+.chat-header {
+  background: #3498db;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-body {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+.chat-body p {
+  margin: 5px 0;
+}
+.bot-msg {
+  color: #555;
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.user-msg {
+  text-align: right;
+  color: white;
+  background: #3498db;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 50px;
+}
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+.chat-input input {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+}
+.chat-input button {
+  background: #3498db;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+
+<script>
+  let isLoggedIn = false;
+
+  function openChat() {
+    if (!isLoggedIn) {
+      document.getElementById("chat-login-modal").style.display = "block";
+    } else {
+      document.getElementById("chat-box").classList.remove("hidden");
+    }
+  }
+
+  function closeChat() {
+    document.getElementById("chat-box").classList.add("hidden");
+  }
+
+  function handleLogin() {
+    const user = document.getElementById("chat-username").value;
+    const pass = document.getElementById("chat-password").value;
+
+    // Dummy login logic (you can replace with PHP)
+    if (user === "guest" && pass === "1234") {
+      isLoggedIn = true;
+      document.getElementById("chat-login-modal").style.display = "none";
+      document.getElementById("chat-box").classList.remove("hidden");
+    } else {
+      document.getElementById("chat-login-error").textContent = "Invalid login.";
+    }
+  }
+
+  function sendMessage() {
+    const input = document.getElementById("chat-message");
+    const message = input.value.trim();
+    if (message) {
+      const chatBody = document.getElementById("chat-body");
+      const msgElem = document.createElement("p");
+      msgElem.className = "user-msg";
+      msgElem.textContent = message;
+      chatBody.appendChild(msgElem);
+      input.value = "";
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+  }
+
+  // Close modal on outside click
+  window.onclick = function(e) {
+    const modal = document.getElementById("chat-login-modal");
+    if (e.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+Username: guest
+
+Password: 1234

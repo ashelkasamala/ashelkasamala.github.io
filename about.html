@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - AshTech</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="assets/logo/logo.png" alt="Logo" class="logo-img" />
+    </a>
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+    <li><a href="index.html#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+    <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+  </ul>
+  <button id="moreToggle" class="more-toggle">More ▾</button>
+  <div id="moreDropdown" class="more-dropdown">
+    <ul>
+      <li><a href="index.html#skills"><i class="fas fa-code"></i> Skills</a></li>
+      <li><a href="about.html#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+      <li><a href="index.html#faq"><i class="fas fa-pen-nib"></i> FAG</a></li>
+      <li><a href="blog.html#testimonials"><i class="fas fa-comments"></i> Testimonials</a></li>
+      <li><a href="blog.html#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- About Section -->
+<div class="about-section" data-aos="fade-up">
+  <img src="/assets/profile.jpg" alt="Ashel Profile" class="profile-img">
+  <h1>About Me</h1>
+  <p>
+    I'm <strong>Ashel Kasamala</strong>, the creator behind <strong>AshTech</strong>—a digital space for smart, clean, and impactful solutions.
+  </p>
+  <p>
+    Currently pursuing a BSc in Electrical and Electronics Engineering at <strong>Information and Communication University (ICU)</strong> in Lusaka, Zambia, I enjoy blending engineering logic with creative design to solve everyday problems.
+  </p>
+
+  <div class="about-skills">
+    <h2>What I Do</h2>
+    <ul>
+      <li><i class="fas fa-code"></i> <strong>Web Development:</strong> Clean and responsive websites using HTML, CSS, JavaScript, and PHP</li>
+      <li><i class="fas fa-database"></i> <strong>Database Systems:</strong> MySQL/XAMPP projects, DBMS designs for student or employee systems</li>
+      <li><i class="fas fa-pen-nib"></i> <strong>Writing:</strong> Academic research, technical documentation, and assignments</li>
+      <li><i class="fas fa-paint-brush"></i> <strong>Creative Design:</strong> Flyers, posters, banners—made visually appealing and brand-aligned</li>
+      <li><i class="fas fa-microchip"></i> <strong>Embedded Systems:</strong> Arduino-based prototypes and simulation (Proteus)</li>
+    </ul>
+  </div>
+
+  <p>
+    I’m a hands-on learner and builder. Whether it’s coding a student portal, writing an academic report, or designing a compelling poster—I focus on simplicity, usefulness, and impact.
+  </p>
+
+  <blockquote style="margin: 2rem 0; font-style: italic; background: var(--card-bg); padding: 1rem 1.5rem; border-left: 5px solid var(--link-hover-color); border-radius: 8px;">
+    "My goal is to empower students and small businesses with the tools they need to succeed—digitally, creatively, and efficiently."
+  </blockquote>
+
+  <div style="margin: 2rem 0;">
+    <a href="mailto:kasamalaashell@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email Me</a>
+    <a href="https://github.com/yourusername" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+    <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  </div>
+</div>
+
+  <!-- Gallery Section -->
+  <section class="projects-section" id="gallery" data-aos="fade-up">
+    <h2>Project Snapshots</h2>
+    <div class="projects-grid">
+      <div class="card" data-aos="zoom-in">
+        <img src="/assets/two.png" alt="Web Project" style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+        <p><strong>Responsive Website</strong><br>Developed using HTML, CSS, and JS.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="/assets/three.png" alt="DBMS" style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+        <p><strong>Student DBMS System</strong><br>Built with PHP and MySQL (XAMPP).</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="/assets/one.png" alt="Poster Design" style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+        <p><strong>Poster Design</strong><br>Clean & colorful creative layout.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Experience Section -->
+<section id="experience" class="experience-section" data-aos="fade-up">
+  <h2>My Experience</h2>
+  <p class="experience-intro">
+    My journey in electronics and engineering involves building hands-on, practical circuits. These are just a few of the projects I've designed and documented.
+  </p>
+
+  <div class="experience-grid">
+    
+    <div class="experience-card">
+      <h3><i class="fas fa-lightbulb"></i> Automatic Night Light</h3>
+      <p>Built a light-sensing circuit that turns on a lamp in the dark using LDRs and transistors. Ideal for energy-saving home lighting.</p>
+      <ul class="tools-used">
+        <li>LDR, BC547 Transistor, Resistors</li>
+        <li>9V Battery, Breadboard</li>
+      </ul>
+      <a href="https://github.com/yourusername/night-light-circuit" class="btn small-btn" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+
+    <div class="experience-card">
+      <h3><i class="fas fa-broadcast-tower"></i> Arduino Theremin</h3>
+      <p>A no-touch musical instrument using ultrasonic sensors. It plays different tones based on hand distance.</p>
+      <ul class="tools-used">
+        <li>Arduino Uno, HC-SR04 Sensor</li>
+        <li>Buzzer, Wires, USB</li>
+      </ul>
+      <a href="https://github.com/yourusername/arduino-theremin" class="btn small-btn" target="_blank">
+        <i class="fab fa-github"></i> GitHub Repo
+      </a>
+    </div>
+
+    <div class="experience-card">
+      <h3><i class="fas fa-music"></i> 1937 Radio to iPhone Dock</h3>
+      <p>Hacked a 1937 radio, embedded a mini amplifier, and converted it into a stylish iPhone speaker dock.</p>
+      <ul class="tools-used">
+        <li>TPA3118 Amp, Passive Speakers, Aux Cable</li>
+        <li>Vintage Radio Chassis</li>
+      </ul>
+      <a href="https://github.com/yourusername/radio-dock" class="btn small-btn" target="_blank">
+        <i class="fab fa-github"></i> View Project
+      </a>
+    </div>
+
+    <div class="experience-card">
+      <h3><i class="fas fa-bolt"></i> Dual 5V USB Power Supply</h3>
+      <p>Designed a dual USB power supply using a basic buck converter and capacitors for clean output.</p>
+      <ul class="tools-used">
+        <li>LM7805, Capacitors, USB Ports</li>
+        <li>Perfboard, DC Jack</li>
+      </ul>
+      <a href="/downloads/Internship.pdf" class="btn small-btn" download>
+        <i class="fas fa-file-pdf"></i> Download Schematic
+      </a>
+    </div>
+
+    <div class="experience-card">
+      <h3><i class="fas fa-volume-up"></i> Simple Mono Amplifier</h3>
+      <p>A compact audio amplifier using BC547 and capacitors. Used for radios, small speakers, and projects.</p>
+      <ul class="tools-used">
+        <li>BC547, 10µF Capacitor, 1kΩ Resistor</li>
+        <li>Speaker, Audio Input</li>
+      </ul>
+      <a href="https://www.youtube.com/" class="btn small-btn" target="_blank">
+        <i class="fas fa-play-circle"></i> Watch Demo
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer data-aos="fade-up">
+  <p>Connect with me:</p>
+  <div class="social-icons">
+    <a href="mailto:kasamalaashell@gmail.com" title="Email" target="_blank" rel="noopener">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://github.com/yourusername" title="GitHub" target="_blank" rel="noopener">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/yourprofile" title="LinkedIn" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://facebook.com/yourprofile" title="Facebook" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://wa.me/yourwhatsappphonenumber" title="WhatsApp" target="_blank" rel="noopener">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://instagram.com/yourprofile" title="Instagram" target="_blank" rel="noopener">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://pinterest.com/yourprofile" title="Pinterest" target="_blank" rel="noopener">
+      <i class="fab fa-pinterest-p"></i>
+    </a>
+    <a href="https://www.tiktok.com/@yourprofile" title="TikTok" target="_blank" rel="noopener">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
+  <p>&copy; 2025 AshTech. All rights reserved.</p>
+</footer>
+
+
+  <button id="backToTop" title="Go to top">&uarr;</button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    document.getElementById("backToTop").onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    window.onscroll = function () {
+      const btn = document.getElementById("backToTop");
+      btn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+
+    const moreToggle = document.getElementById("moreToggle");
+    const moreDropdown = document.getElementById("moreDropdown");
+
+    moreToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      moreDropdown.style.display = moreDropdown.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", () => {
+      moreDropdown.style.display = "none";
+    });
+
+    window.addEventListener("scroll", () => {
+      moreDropdown.style.display = "none";
+    });
+  </script>
+</body>
+</html>
+
+
+<style>
+  .social-icons {
+  margin: 0.5rem 0 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-icons a {
+  color: var(--link-hover-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a:hover {
+  color: #f94e4e;
+}
+
+/* Footer base styles (optional tweak) */
+footer p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+</style>

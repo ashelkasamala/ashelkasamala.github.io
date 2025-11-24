@@ -1,0 +1,216 @@
+<?php
+session_start();
+if (isset($_SESSION['error'])) {
+    echo '<div style="color: #d33; margin-bottom: 1rem; font-weight: bold;">' . htmlspecialchars($_SESSION['error']) . '</div>';
+    unset($_SESSION['error']);
+}
+if (isset($_SESSION['success'])) {
+    echo '<div style="color: #28a745; margin-bottom: 1rem; font-weight: bold;">' . htmlspecialchars($_SESSION['success']) . '</div>';
+    unset($_SESSION['success']);
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | AshTech</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    .register-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .register-container {
+      display: flex;
+      max-width: 900px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .register-image {
+      flex: 1;
+      display: none;
+      background: url('assets/login-cover.jpg') center/cover no-repeat;
+    }
+
+    .register-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .register-form {
+      flex: 1;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .register-form h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .register-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .register-form input {
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background: #f1f1f1;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    .register-form button {
+      padding: 12px;
+      margin-top: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .register-form button:hover {
+      background-color: #2980b9;
+    }
+
+    .social-register {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 8px 0;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .google-btn {
+      background-color: #db4437;
+      color: white;
+    }
+
+    .facebook-btn {
+      background-color: #4267B2;
+      color: white;
+    }
+
+    .login-link {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .login-link a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .register-image {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo/logo.png" alt="Logo" class="logo-img" />
+      </a>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+      <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+      <li><a href="#todo"><i class="fas fa-check-square"></i> To-Do</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+  
+
+  <!-- Registration Section -->
+  <main class="register-wrapper">
+    <div class="register-container">
+      <div class="register-image">
+        <img src="/assets/1.png" alt="Register Illustration" />
+      </div>
+
+      <div class="register-form">
+        <h2>Create Your AshTech Account</h2>
+        <form action="register_process.php" method="POST">
+          <input type="text" name="fullname" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+          <input type="password" name="password" placeholder="Password" required />
+          <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+          <button type="submit">Register</button>
+        </form>
+
+        <div class="social-register">
+          <p>Or sign up with:</p>
+          <button class="social-btn google-btn"><i class="fab fa-google"></i> Google</button>
+          <button class="social-btn facebook-btn"><i class="fab fa-facebook-f"></i> Facebook</button>
+        </div>
+
+        <div class="login-link">
+          <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Connect with me:</p>
+    <div class="social-icons">
+      <a href="mailto:kasamalaashell@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 AshTech. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

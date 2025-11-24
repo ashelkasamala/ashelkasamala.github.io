@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog - AshTech</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="assets/logo/logo.png" alt="Logo" class="logo-img" />
+    </a>
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+    <li><a href="index.html#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+    <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+  </ul>
+  <button id="moreToggle" class="more-toggle">More ▾</button>
+  <div id="moreDropdown" class="more-dropdown">
+    <ul>
+      <li><a href="index.html#skills"><i class="fas fa-code"></i> Skills</a></li>
+      <li><a href="about.html#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+      <li><a href="index.html#faq"><i class="fas fa-pen-nib"></i> FAG</a></li>
+      <li><a href="blog.html#testimonials"><i class="fas fa-comments"></i> Testimonials</a></li>
+      <li><a href="blog.html#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!-- Main Blog Container -->
+<main class="blog-section" data-aos="fade-up">
+  <h1 class="blog-title">Latest Blog Posts</h1>
+
+  <section class="blog-grid">
+    <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-image">
+        <img src="assets/images/projects/1.jpg" alt="Arduino Theremin project" />
+      </div>
+      <div class="card-content">
+        <h2>Building an Arduino Theremin: Sound with Electronics</h2>
+        <p class="post-date">June 10, 2025</p>
+        <p>Learn how to create a musical instrument using Arduino, ultrasonic sensors, and some coding magic. Perfect for electronics beginners and music lovers.</p>
+        <div class="project-info">
+          Tools: Arduino, Ultrasonic Sensor, C++ <br />
+          Difficulty: Intermediate
+        </div>
+        <div class="tags">
+          <span>Arduino</span>
+          <span>Music</span>
+          <span>Electronics</span>
+        </div>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </article>
+
+    <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="card-image">
+        <img src="assets/images/projects/1.jpg" alt="Automatic Night Light project" />
+      </div>
+      <div class="card-content">
+        <h2>Automatic Night Light Project</h2>
+        <p class="post-date">May 28, 2025</p>
+        <p>A step-by-step guide to build a night light that automatically switches on when it gets dark using simple components and circuits.</p>
+        <div class="project-info">
+          Tools: LDR Sensor, Transistor, LEDs <br />
+          Difficulty: Beginner
+        </div>
+        <div class="tags">
+          <span>DIY</span>
+          <span>Electronics</span>
+          <span>Lighting</span>
+        </div>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </article>
+
+    <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="card-image">
+        <img src="assets/images/projects/1.jpg" alt="1937 Radio turned iPhone dock" />
+      </div>
+      <div class="card-content">
+        <h2>Hacking a 1937 Radio into an iPhone Dock</h2>
+        <p class="post-date">May 15, 2025</p>
+        <p>Discover how old-school vintage meets modern tech by converting a classic radio into a stylish iPhone dock with built-in speakers.</p>
+        <div class="project-info">
+          Tools: Vintage Radio, Bluetooth Module, Woodworking <br />
+          Difficulty: Advanced
+        </div>
+        <div class="tags">
+          <span>DIY</span>
+          <span>Vintage</span>
+          <span>Audio</span>
+        </div>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </article>
+
+    <article class="blog-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="card-image">
+        <img src="assets/images/projects/1.jpg" alt="Simple Mono Amplifier Circuit" />
+      </div>
+      <div class="card-content">
+        <h2>Making a Simple Mono Amplifier Circuit</h2>
+        <p class="post-date">April 30, 2025</p>
+        <p>Explore the basics of amplifier circuits with this simple mono amplifier project that boosts audio signals with great sound clarity.</p>
+        <div class="project-info">
+          Tools: Transistors, Capacitors, Resistors <br />
+          Difficulty: Beginner
+        </div>
+        <div class="tags">
+          <span>Electronics</span>
+          <span>Audio</span>
+          <span>DIY</span>
+        </div>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </article>
+  </section>
+</main>
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-section" data-aos="fade-up">
+  <h2 class="section-title">What People Say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p>"Ashel is a brilliant developer! Delivered our project ahead of schedule and exceeded our expectations."</p>
+      <h4>- Jane Doe, Project Manager</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"Professional, responsive, and creative. Highly recommended for any web design needs!"</p>
+      <h4>- John Smith, Startup Founder</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"Great attention to detail and always goes the extra mile. Would definitely work with Ashel again."</p>
+      <h4>- Linda M., Designer</h4>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery-section" data-aos="fade-up">
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery-grid">
+    <img src="assets/gallery1.jpg" alt="Project 1">
+    <img src="assets/gallery2.jpg" alt="Project 2">
+    <img src="assets/gallery3.jpg" alt="Project 3">
+    <img src="assets/gallery4.jpg" alt="Project 4">
+    <img src="assets/gallery5.jpg" alt="Project 5">
+    <img src="assets/gallery5.jpg" alt="Project 6">
+    <img src="assets/gallery5.jpg" alt="Project 7">
+    <img src="assets/gallery5.jpg" alt="Project 8">
+  </div>
+</section>
+
+
+
+  <!-- Footer (styled via style.css) -->
+
+<!-- Footer -->
+<footer data-aos="fade-up">
+  <p>Connect with me:</p>
+  <div class="social-icons">
+    <a href="mailto:kasamalaashell@gmail.com" title="Email" target="_blank" rel="noopener">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://github.com/yourusername" title="GitHub" target="_blank" rel="noopener">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/yourprofile" title="LinkedIn" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://facebook.com/yourprofile" title="Facebook" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://wa.me/yourwhatsappphonenumber" title="WhatsApp" target="_blank" rel="noopener">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://instagram.com/yourprofile" title="Instagram" target="_blank" rel="noopener">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://pinterest.com/yourprofile" title="Pinterest" target="_blank" rel="noopener">
+      <i class="fab fa-pinterest-p"></i>
+    </a>
+    <a href="https://www.tiktok.com/@yourprofile" title="TikTok" target="_blank" rel="noopener">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
+  <p>&copy; 2025 AshTech. All rights reserved.</p>
+</footer>
+
+  <button id="backToTop" title="Go to top">&uarr;</button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    document.getElementById("backToTop").onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    window.onscroll = function () {
+      const btn = document.getElementById("backToTop");
+      btn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+
+    const moreToggle = document.getElementById("moreToggle");
+    const moreDropdown = document.getElementById("moreDropdown");
+
+    moreToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      moreDropdown.style.display = moreDropdown.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", () => {
+      moreDropdown.style.display = "none";
+    });
+
+    window.addEventListener("scroll", () => {
+      moreDropdown.style.display = "none";
+    });
+  </script>
+</body>
+</html>
+
+
+<style>
+    /* Blog Section */
+.blog-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.blog-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 2.5rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.card-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.project-info {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.tags {
+  margin-bottom: 1.2rem;
+}
+.tags span {
+  display: inline-block;
+  background-color: #eef4f8;
+  color: #39739d;
+  padding: 5px 10px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  margin-right: 6px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+  background-color: #2874a6;
+  box-shadow: 0 6px 12px rgba(40, 116, 166, 0.3);
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+  .social-icons {
+  margin: 0.5rem 0 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-icons a {
+  color: var(--link-hover-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a:hover {
+  color: #f94e4e;
+}
+
+/* Footer base styles (optional tweak) */
+footer p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+
+</style>
